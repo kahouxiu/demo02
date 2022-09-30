@@ -1,0 +1,12 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.dao.InquiryDao">
+<select id="insertInquiry" resultType="com.example.demo.entity.Inquiry">
+   INSERT INTO inquiry(name,email,contents,created) VALUES(#{name},#{email},#{contents},#{created})
+</select>
+
+<select id="getAll" resultType="com.example.demo.entity.Inquiry">
+select * from inquiry
+</select>
+</mapper>
